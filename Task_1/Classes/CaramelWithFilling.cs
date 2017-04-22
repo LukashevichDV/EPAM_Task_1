@@ -7,11 +7,17 @@ using System.Threading.Tasks;
 
 namespace Task_1.Classes
 {
+    public enum TypeCaramelFilling { Strawberry, Banana, Mint }
+
     public class CaramelWithFilling : Caramel
     {
-        public CaramelWithFilling(string name, int weight, int sugar, double caloriety) 
+        
+        public TypeCaramelFilling Type;
+
+        public CaramelWithFilling(string name, int weight, int sugar, double caloriety, TypeCaramelFilling type) 
             : base(name, weight, sugar, caloriety)
         {
+            this.Type = type;
         }
     }
 }

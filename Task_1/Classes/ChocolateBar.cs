@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Task_1.Interfaces;
+﻿using Task_1.Interfaces;
 
 namespace Task_1.Classes
 {
-    public class Caramel : ISweetStuff
+    class ChocolateBar : ISweetStuff
     {
-
         public string Name { get; protected set; }
 
 
@@ -22,14 +16,12 @@ namespace Task_1.Classes
         public double Caloriety { get; protected set; }
 
 
-        public Caramel(string name, int weight, int sugar, double caloriety)
+        public ChocolateBar(string name, int weight, int sugar, double caloriety)
         {
             Name = name;
             Weight = weight;
             Sugar = sugar;
             Caloriety = caloriety;
-
         }
-
     }
 }

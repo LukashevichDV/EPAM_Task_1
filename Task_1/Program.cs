@@ -1,21 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Task_1.Classes;
 
 namespace Task_1
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Caramel c1 = new Caramel("mars", 50, 100, 150);
-            Console.WriteLine(String.Format("Caloriety = {0}" ,c1.Caloriety));
+
+            Gift g1 = new Gift();
+
+            Caramel c1 = new Caramel("Chupa-chups", 15, 50, 75);
+
+            g1.Items.Add(c1);
+            g1.sort();
+
+
+            Console.WriteLine("Набор конфет: ");
+            foreach (var i in g1.Items)
+            {
+                Console.WriteLine("Название конфеты: {0}, Вес конфеты: {1}, Сахар: {2}, Калории: {3},"
+                    , i.Name, i.Weight, i.Sugar, i.Caloriety);
+            }
             Console.ReadLine();
-        
-            
         }
+
     }
 }
