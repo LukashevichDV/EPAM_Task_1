@@ -51,7 +51,7 @@
     <Compile Include="Classes\SweetWithFilling.cs" />
     <Compile Include="Interfaces\IGift.cs" />
     <Compile Include="Interfaces\ISweetStuff.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Demo\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

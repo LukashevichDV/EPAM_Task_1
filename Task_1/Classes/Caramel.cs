@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Task_1.Interfaces;
+﻿using Task_1.Interfaces;
 
 namespace Task_1.Classes
 {
+
     public class Caramel : ISweetStuff
     {
+        //price of 1 gramm of caramel 
+        private const double CARAMEL_PRICE = 0.005;
 
         public string Name { get; protected set; }
 
@@ -20,6 +18,12 @@ namespace Task_1.Classes
 
 
         public double Caloriety { get; protected set; }
+
+
+        public virtual double getPrice()
+        {
+            return CARAMEL_PRICE * Weight;
+        }
 
 
         public Caramel(string name, int weight, int sugar, double caloriety)
