@@ -7,9 +7,9 @@
     public class CaramelWithFilling : Caramel
     {
         //price of 1 gramm of caramel with filling
-        private const double CARAMEL_WITH_FILLING_PRICE = 0.009;
+        private const double CARAMEL_WITH_FILLING_PRICE = 0.01;
 
-        public override double getPrice()
+        public override double GetPrice()
         {
             return CARAMEL_WITH_FILLING_PRICE * Weight;
         }

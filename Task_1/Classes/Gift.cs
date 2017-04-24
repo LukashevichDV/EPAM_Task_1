@@ -8,6 +8,10 @@ namespace Task_1.Classes
     public class Gift : IGift
 
     {
+        public Gift()
+        {
+            Items = new List<ISweetStuff>();
+        }
 
         public string Name { get; protected set; }
 
@@ -49,7 +53,7 @@ namespace Task_1.Classes
             Items.Add(stuff);
         }
 
-        public void sort()
+        public void Sort()
         {
             var temp = Items.OrderBy(x => x.Weight).ToList();
             Items.Clear();
@@ -60,17 +64,26 @@ namespace Task_1.Classes
         }
 
 
-        public void price()
+        public double GetPrice()
         {
-            throw new NotImplementedException();
+
+            {
+                if (Items != null)
+                {
+
+                    return Items.Sum(x => x.GetPrice());
+                }
+                else
+                {
+                    throw new InvalidOperationException("Container in Gift cannot be null");
+                }
+            }
         }
 
-
-        public Gift()
+        public string GetInfo()
         {
-            Items = new List<ISweetStuff>();
+            return null;
         }
-
 
     }
 }

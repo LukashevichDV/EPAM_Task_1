@@ -8,7 +8,7 @@
         int Sugar { get; }
         double Caloriety { get; }
 
-        double getPrice();
+        double GetPrice();
 
 
 

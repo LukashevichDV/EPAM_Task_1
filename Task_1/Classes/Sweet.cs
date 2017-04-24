@@ -5,7 +5,7 @@ namespace Task_1.Classes
     public class Sweet : ISweetStuff
     {
         //price of 1 gramm of sweet
-        private const double SWEET_PRICE = 0.007;
+        private const double SWEET_PRICE = 0.01;
 
 
         public string Name { get; protected set; }
@@ -28,7 +28,7 @@ namespace Task_1.Classes
             Caloriety = caloriety;
         }
 
-        public virtual double getPrice()
+        public virtual double GetPrice()
         {
             return SWEET_PRICE * Weight;
         }

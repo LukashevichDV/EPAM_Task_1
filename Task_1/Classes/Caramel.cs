@@ -20,7 +20,7 @@ namespace Task_1.Classes
         public double Caloriety { get; protected set; }
 
 
-        public virtual double getPrice()
+        public virtual double GetPrice()
         {
             return CARAMEL_PRICE * Weight;
         }

@@ -5,11 +5,11 @@
     class SweetWithFilling : Sweet
     {
         //price of 1 gramm of sweet with filling
-        private const double SWEET_WITH_FILLING_PRICE = 0.012;
+        private const double SWEET_WITH_FILLING_PRICE = 0.02;
 
         public TypeSweetFilling Type;
 
-        public override double getPrice()
+        public override double GetPrice()
         {
             return SWEET_WITH_FILLING_PRICE * Weight;
         }
