@@ -70,7 +70,6 @@ namespace Task_1.Classes
             {
                 if (Items != null)
                 {
-
                     return Items.Sum(x => x.GetPrice());
                 }
                 else
