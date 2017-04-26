@@ -1,14 +1,11 @@
 ﻿using System;
 using Task_1.Classes;
 using Task_1.Demo;
-using Task_1.Interfaces;
 
 namespace Task_1
 {
     public class Program
     {
-
-
 
         static void Main(string[] args)
         {
@@ -28,13 +25,11 @@ namespace Task_1
             g1.Sort();
             g1.ShowItems();
             g1.ShowPrice();
-
+            g1.ShowSweetStuffBySugar();
 
             Console.ReadLine();
 
-
-
-
+            
         }
 
     }

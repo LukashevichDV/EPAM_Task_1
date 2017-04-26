@@ -16,7 +16,29 @@ namespace Task_1.Classes
         public string Name { get; protected set; }
 
 
+        public double Weight
+        {
+            get
+            {
+                if (Items != null)
+                {
+                    return Items.Sum(x => x.Weight);
+                }
+                else
+                {
+                    throw new InvalidOperationException("Container in Gift cannot be null");
+                }
+            }
+        }
+
+
         public ICollection<ISweetStuff> Items { get; private set; }
+
+
+        public void Add(ISweetStuff stuff)
+        {
+            Items.Add(stuff);
+        }
 
 
         public ICollection<ISweetStuff> FindSweetStuffBySugar(int min, int max)
@@ -32,27 +54,6 @@ namespace Task_1.Classes
         }
 
 
-        public double Weight
-        {
-            get
-            {
-                if (Items != null)
-                {
-
-                    return Items.Sum(x => x.Weight);
-                }
-                else
-                {
-                    throw new InvalidOperationException("Container in Gift cannot be null");
-                }
-            }
-        }
-
-        public void Add(ISweetStuff stuff)
-        {
-            Items.Add(stuff);
-        }
-
         public void Sort()
         {
             var temp = Items.OrderBy(x => x.Weight).ToList();
@@ -67,22 +68,17 @@ namespace Task_1.Classes
         public double GetPrice()
         {
 
+            if (Items != null)
             {
-                if (Items != null)
-                {
-                    return Items.Sum(x => x.GetPrice());
-                }
-                else
-                {
-                    throw new InvalidOperationException("Container in Gift cannot be null");
-                }
+                return Items.Sum(x => x.GetPrice());
             }
+            else
+            {
+                throw new InvalidOperationException("Container in Gift cannot be null");
+            }
+
         }
 
-        public string GetInfo()
-        {
-            return null;
-        }
 
     }
 }

@@ -10,7 +10,7 @@ namespace Task_1.Interfaces
         double Weight { get; }
         void Sort();
         double GetPrice();
-        string GetInfo();
+
 
 
 
