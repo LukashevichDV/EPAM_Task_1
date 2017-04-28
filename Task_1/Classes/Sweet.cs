@@ -20,12 +20,12 @@ namespace Task_1.Classes
         public double Caloriety { get; protected set; }
 
 
-        public Sweet(string name, int weight, int sugar, double caloriety)
+        public Sweet(string _name, int _weight, int _sugar, double _caloriety)
         {
-            Name = name;
-            Weight = weight;
-            Sugar = sugar;
-            Caloriety = caloriety;
+            Name = _name;
+            Weight = _weight;
+            Sugar = _sugar;
+            Caloriety = _caloriety;
         }
 
         public virtual double GetPrice()
@@ -33,7 +33,5 @@ namespace Task_1.Classes
             return SWEET_PRICE * Weight;
         }
     }
-
-
 }
 

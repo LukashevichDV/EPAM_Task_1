@@ -8,6 +8,7 @@ namespace Task_1.Classes
         //price of 1 gramm of caramel 
         private const double CARAMEL_PRICE = 0.005;
 
+
         public string Name { get; protected set; }
 
 
@@ -26,14 +27,12 @@ namespace Task_1.Classes
         }
 
 
-        public Caramel(string name, int weight, int sugar, double caloriety)
+        public Caramel(string _name, int _weight, int _sugar, double _caloriety)
         {
-            Name = name;
-            Weight = weight;
-            Sugar = sugar;
-            Caloriety = caloriety;
-
+            Name = _name;
+            Weight = _weight;
+            Sugar = _sugar;
+            Caloriety = _caloriety;
         }
-
     }
 }

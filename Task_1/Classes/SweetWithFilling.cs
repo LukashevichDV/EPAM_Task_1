@@ -7,17 +7,20 @@
         //price of 1 gramm of sweet with filling
         private const double SWEET_WITH_FILLING_PRICE = 0.02;
 
+
         public TypeSweetFilling Type;
+
 
         public override double GetPrice()
         {
             return SWEET_WITH_FILLING_PRICE * Weight;
         }
 
-        public SweetWithFilling(string name, int weight, int sugar, double caloriety, TypeSweetFilling type)
-            : base(name, weight, sugar, caloriety)
+
+        public SweetWithFilling(string _name, int _weight, int _sugar, double _caloriety, TypeSweetFilling _type)
+            : base(_name, _weight, _sugar, _caloriety)
         {
-            this.Type = type;
+            Type = _type;
         }
     }
 }

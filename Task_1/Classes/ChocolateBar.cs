@@ -7,6 +7,7 @@ namespace Task_1.Classes
         //price of 1 gramm of chocolate bar
         private const double CHOCOLATE_BAR_PRICE = 0.02;
 
+
         public string Name { get; protected set; }
 
 
@@ -19,12 +20,12 @@ namespace Task_1.Classes
         public double Caloriety { get; protected set; }
 
 
-        public ChocolateBar(string name, int weight, int sugar, double caloriety)
+        public ChocolateBar(string _name, int _weight, int _sugar, double _caloriety)
         {
-            Name = name;
-            Weight = weight;
-            Sugar = sugar;
-            Caloriety = caloriety;
+            Name = _name;
+            Weight = _weight;
+            Sugar = _sugar;
+            Caloriety = _caloriety;
         }
 
         public double GetPrice()

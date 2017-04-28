@@ -8,10 +8,26 @@ namespace Task_1.Classes
     public class Gift : IGift
 
     {
+        public ICollection<ISweetStuff> Items { get; private set; }
+
+
+        public void Add(ISweetStuff stuff)
+        {
+            Items.Add(stuff);
+        }
+
+
+        public void Remove(ISweetStuff stuff)
+        {
+            Items.Remove(stuff);
+        }
+
+
         public Gift()
         {
             Items = new List<ISweetStuff>();
         }
+
 
         public string Name { get; protected set; }
 
@@ -32,15 +48,6 @@ namespace Task_1.Classes
         }
 
 
-        public ICollection<ISweetStuff> Items { get; private set; }
-
-
-        public void Add(ISweetStuff stuff)
-        {
-            Items.Add(stuff);
-        }
-
-
         public ICollection<ISweetStuff> FindSweetStuffBySugar(int min, int max)
         {
             if (Items != null)
@@ -54,7 +61,7 @@ namespace Task_1.Classes
         }
 
 
-        public void Sort()
+        public void SortByWeight()
         {
             var temp = Items.OrderBy(x => x.Weight).ToList();
             Items.Clear();
@@ -76,9 +83,6 @@ namespace Task_1.Classes
             {
                 throw new InvalidOperationException("Container in Gift cannot be null");
             }
-
         }
-
-
     }
 }

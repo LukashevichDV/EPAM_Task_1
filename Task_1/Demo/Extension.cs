@@ -13,9 +13,7 @@ namespace Task_1.Demo
             {
                 Console.WriteLine("name: {0}, weight: {1}, sugar: {2}, caloriety: {3}"
                     , i.Name, i.Weight, i.Sugar, i.Caloriety);
-
             }
-
         }
 
         public static void ShowPrice(this IGift gift)
@@ -38,6 +36,5 @@ namespace Task_1.Demo
                 Console.WriteLine("Sweet: {0}, Sugar: {1}", items.Name, items.Sugar);
             }
         }
-
     }
 }
