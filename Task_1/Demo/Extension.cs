@@ -8,7 +8,7 @@ namespace Task_1.Demo
     {
         public static void ShowItems(this IGift gift)
         {
-            Console.WriteLine("Set of sweets in gift: ");
+            Console.WriteLine("Set of sweets in a gift: ");
             foreach (var i in gift.Items)
             {
                 Console.WriteLine("name: {0}, weight: {1}, sugar: {2}, caloriety: {3}"
@@ -18,7 +18,7 @@ namespace Task_1.Demo
 
         public static void ShowPrice(this IGift gift)
         {
-            double sum = gift.Items.Sum(x => x.GetPrice());
+            double sum = gift.Items.Sum(x => x.GetSweetStuffPrice());
             double y = sum;
             int z = (int)y;
             decimal b = Math.Round((((decimal)y - z) * 100), 1);
@@ -30,11 +30,20 @@ namespace Task_1.Demo
         public static void ShowSweetStuffBySugar(this IGift gift)
         {
             Console.WriteLine("--------------------------------------------------------");
-            Console.WriteLine("Set of sweets beetwen min= {0} and max= {1} sugar ", 20, 110);
+            Console.WriteLine("Set of sweets beetwen min= {0} and max= {1} sugar: ", 20, 110);
             foreach (var items in gift.FindSweetStuffBySugar(20, 110))
             {
                 Console.WriteLine("Sweet: {0}, Sugar: {1}", items.Name, items.Sugar);
             }
+        }
+
+
+        public static void ShowWeight(this IGift gift)
+        {
+            Console.WriteLine("--------------------------------------------------------");
+            double sum = gift.Items.Sum(x => x.Weight);
+            Console.WriteLine("Weight of a gift is:");
+            Console.WriteLine("{0} gramms ", sum);
         }
     }
 }

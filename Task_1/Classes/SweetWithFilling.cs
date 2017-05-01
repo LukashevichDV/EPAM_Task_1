@@ -11,7 +11,7 @@
         public TypeSweetFilling Type;
 
 
-        public override double GetPrice()
+        public override double GetSweetStuffPrice()
         {
             return SWEET_WITH_FILLING_PRICE * Weight;
         }

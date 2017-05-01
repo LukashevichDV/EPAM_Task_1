@@ -28,7 +28,7 @@ namespace Task_1.Classes
             Caloriety = _caloriety;
         }
 
-        public virtual double GetPrice()
+        public virtual double GetSweetStuffPrice()
         {
             return SWEET_PRICE * Weight;
         }

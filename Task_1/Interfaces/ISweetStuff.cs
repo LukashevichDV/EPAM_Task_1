@@ -6,6 +6,6 @@
         int Weight { get; }
         int Sugar { get; }
         double Caloriety { get; }
-        double GetPrice();
+        double GetSweetStuffPrice();
     }
 }

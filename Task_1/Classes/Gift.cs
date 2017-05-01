@@ -32,18 +32,15 @@ namespace Task_1.Classes
         public string Name { get; protected set; }
 
 
-        public double Weight
+        public double GetWeight()
         {
-            get
+            if (Items != null)
             {
-                if (Items != null)
-                {
-                    return Items.Sum(x => x.Weight);
-                }
-                else
-                {
-                    throw new InvalidOperationException("Container in Gift cannot be null");
-                }
+                return Items.Sum(x => x.Weight);
+            }
+            else
+            {
+                throw new InvalidOperationException("Container in Gift cannot be null");
             }
         }
 
@@ -72,12 +69,12 @@ namespace Task_1.Classes
         }
 
 
-        public double GetPrice()
+        public double GetGiftPrice()
         {
 
             if (Items != null)
             {
-                return Items.Sum(x => x.GetPrice());
+                return Items.Sum(x => x.GetSweetStuffPrice());
             }
             else
             {

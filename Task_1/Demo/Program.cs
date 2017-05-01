@@ -20,10 +20,12 @@ namespace Task_1
             g1.Add(s1);
             g1.Add(s2);
 
+
             g1.SortByWeight();
             g1.ShowItems();
             g1.ShowPrice();
             g1.ShowSweetStuffBySugar();
+            g1.ShowWeight();
 
             Console.ReadLine();
         }

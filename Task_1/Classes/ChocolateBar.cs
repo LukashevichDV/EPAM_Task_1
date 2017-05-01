@@ -28,7 +28,7 @@ namespace Task_1.Classes
             Caloriety = _caloriety;
         }
 
-        public double GetPrice()
+        public double GetSweetStuffPrice()
         {
             return CHOCOLATE_BAR_PRICE * Weight;
         }

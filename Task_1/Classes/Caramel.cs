@@ -21,7 +21,7 @@ namespace Task_1.Classes
         public double Caloriety { get; protected set; }
 
 
-        public virtual double GetPrice()
+        public virtual double GetSweetStuffPrice()
         {
             return CARAMEL_PRICE * Weight;
         }
